@@ -66,16 +66,18 @@ and 'categories': is the category names.
 The ***review.csv*** file contains the star rating given by a user to a business. 
 Use user_id to associate this review with others by the same user. 
 Use business_id to associate this review with others of the same business.  
-
-review.csv file contains the following columns "review_id"::"user_id"::"business_id"::"stars" 'review_id': (a unique identifier for the review). 
-'user_id': (the identifier of the reviewed business),
-'business_id': (the identifier of the authoring user),
+It contains the following columns:
+```
+"review_id"::"user_id"::"business_id"::"stars" '
+```
+where review_id' is a unique identifier for the review, 'user_id' is the identifier of the authoring user,'business_id' is the identifier of the reviewed business, and
 'stars': (star rating, integer 1-5),the rating given by the user to a business
 
-***user.csv*** file contains aggregate information about a single user across all of Yelp user.csv file contains the following columns "user_id"::"name"::"url"
-user_id': (unique user identifier),
-'name': (first name, last initial, like 'Matt J.'), this column has been made anonymous to preserve privacy
-'url': url of the user on yelp
+***user.csv*** file contains aggregate information about a single user across all of Yelp user.csv file contains the following columns:
+```
+"user_id"::"name"::"url"
+```
+ where user_id': (unique user identifier), 'name': (first name, last initial, like 'Matt J.'), this column has been made anonymous to preserve privacy, and 'url' is the url of the user on yelp
 
 **Note:** :: is Column separator in the files.
 
