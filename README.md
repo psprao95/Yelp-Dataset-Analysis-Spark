@@ -55,12 +55,18 @@ business.csv.
 review.csv. 
  user.csv.
 
-***Business.csv*** file contain basic information about local businesses.
-Business.csv file contains the following columns "business_id"::"full_address"::"categories"
-'business_id': (a unique identifier for the business) 'full_address': (localized address),
-'categories': [(localized category names)]
+The ***business.csv*** file contain basic information about local businesses.
+Business.csv file contains the following columns:
+```
+"business_id"::"full_address"::"categories"
+```
+where 'business_id' is a unique identifier for the business, 'full_address' is the localized address,
+and 'categories': is the category names.
 
-***review.csv*** file contains the star rating given by a user to a business. Use user_id to associate this review with others by the same user. Use business_id to associate this review with others of the same business.  
+The ***review.csv*** file contains the star rating given by a user to a business. 
+Use user_id to associate this review with others by the same user. 
+Use business_id to associate this review with others of the same business.  
+
 review.csv file contains the following columns "review_id"::"user_id"::"business_id"::"stars" 'review_id': (a unique identifier for the review). 
 'user_id': (the identifier of the reviewed business),
 'business_id': (the identifier of the authoring user),
