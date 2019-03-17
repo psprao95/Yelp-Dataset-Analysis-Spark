@@ -5,9 +5,11 @@ Analysing the yelp dataset to get specific data.
 Write a spark script to find total number of common friends for any possible friend pairs. The key idea is that if two people are friend then they have a lot of mutual/common friends.
 
 For example,
-Alice’s friends are Bob, Sam, Sara, Nancy Bob’s friends are Alice, Sam, Clara, Nancy Sara’s friends are Alice, Sam, Clara, Nancy
-As Alice and Bob are friend and so, their mutual friend list is [Sam, Nancy]
-As Sara and Bob are not friend and so, their mutual friend list is empty. (In this case you may exclude them from your output).
+Alice’s friends are Bob, Sam, Sara.
+Nancy Bob’s friends are Alice, Sam, Clara, Nancy.
+Sara’s friends are Alice, Sam, Clara, Nancy.
+As Alice and Bob are friend and so, their mutual friend list is [Sam, Nancy].
+As Sara and Bob are not friends and so, their mutual friend list is empty. (In this case you may exclude them from your output).
 
 Input files:
 1. soc-LiveJournal1Adj.txt
