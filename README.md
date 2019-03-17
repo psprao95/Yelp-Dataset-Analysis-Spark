@@ -51,23 +51,22 @@ Find top-10 friend pairs by their total number of common friends. For each top-1
 ## Problem 3
 **Data set info:**
 The dataset files are as follows and columns are separate using ‘::’  
-business.csv. review.csv. user.csv.
+business.csv. 
+review.csv. 
+ user.csv.
 
-**Data set Description.**
-The data set comprises of three csv files, namely user.csv, business.csv and review.csv.
-
-Business.csv file contain basic information about local businesses.
+***Business.csv*** file contain basic information about local businesses.
 Business.csv file contains the following columns "business_id"::"full_address"::"categories"
 'business_id': (a unique identifier for the business) 'full_address': (localized address),
 'categories': [(localized category names)]
 
-review.csv file contains the star rating given by a user to a business. Use user_id to associate this review with others by the same user. Use business_id to associate this review with others of the same business.  
+***review.csv*** file contains the star rating given by a user to a business. Use user_id to associate this review with others by the same user. Use business_id to associate this review with others of the same business.  
 review.csv file contains the following columns "review_id"::"user_id"::"business_id"::"stars" 'review_id': (a unique identifier for the review). 
 'user_id': (the identifier of the reviewed business),
 'business_id': (the identifier of the authoring user),
 'stars': (star rating, integer 1-5),the rating given by the user to a business
 
-user.csv file contains aggregate information about a single user across all of Yelp user.csv file contains the following columns "user_id"::"name"::"url"
+***user.csv*** file contains aggregate information about a single user across all of Yelp user.csv file contains the following columns "user_id"::"name"::"url"
 user_id': (unique user identifier),
 'name': (first name, last initial, like 'Matt J.'), this column has been made anonymous to preserve privacy
 'url': url of the user on yelp
