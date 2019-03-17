@@ -1,9 +1,7 @@
-import org.apache.spark.sql.functions._
-
-// Importing mutual-friends.txt
+import org.apache.spark.sql.functions._// Importing mutual-friends.txt
 val input=sc.textFile("/FileStore/tables/mutual_friends-d6c0a.txt")
 
-// Parsing. Format:Array[(String, Array[String])]
+// Parsing the info. Output Format:Array[(String, Array[String])]
 val temp = input.map(x => x.split("\t")).filter(x => x.length == 2).map(x => (x(0), x(1).split(",")))
 
 // Mapping. Format:Array[List[(String, List[String])]]
@@ -27,10 +25,10 @@ val mapping=temp.map(x=>
 //Reducing
 val reduce=mapping.flatMap(identity).map(x=>(x._1,x._2)).distinct.reduceByKey((x,y)=>x.intersect(y))
 
-// Taking the top ten pairs
+// Getting the number of mutual friends for a pair
 val output=reduce.map(x=>(x._1,x._2.length)).map(x=>(x._1.split(",")(0),x._1.split(",")(1),x._2))
 
-// Making a dataframw
+// Making a dataframe for each pair and its mutual friends count
 var pairs=output.toDF("userA_id","userB_id","mutual friend count")
 
 // Taking the pairs with the top ten count
@@ -44,13 +42,15 @@ val parseUsersInfo=userDataFile.map(x=>x.split(",")).map(x=>(x(0),x(1),x(2),x(3)
 
 // Making a dataframe for UserA
 val userA=parseUsersInfo.toDF("userA_id","userA First Name","userA Last Name","userA Address")
+
+// Making a dataframe for userB
 val userB=parseUsersInfo.toDF("userB_id","userB First Name","userB Last Name","userB Address")
 
-// Joining the top ten pairs with the dataframe for userA
+// joining top ten pairs with userA dataframe
 var join1=topTenPairs.join(userA,"userA_id")
 
-// Joining the top ten pairs with the dataframe for userB
+//joining above dataframe with userB dataframe
 var join2=join1.join(userB,"userB_id")
 
-//Display the output
-display(join2)
+// Display output
+display(join2.select("mutual friend count","userA First Name","userA Last Name","userA Address","userB First Name","userB Last Name","userB Address"))
