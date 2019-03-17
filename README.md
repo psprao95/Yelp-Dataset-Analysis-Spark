@@ -49,8 +49,6 @@ Find top-10 friend pairs by their total number of common friends. For each top-1
 ```
 
 ## Problem 3
-In this question, you will learn how to solve problems using Apache Spark. Please use Apache Spark to derive some statistics from Yelp Dataset.
-
 **Data set info:**
 The dataset files are as follows and columns are separate using ‘::’  
 business.csv. review.csv. user.csv.
@@ -73,8 +71,12 @@ user.csv file contains aggregate information about a single user across all of Y
 user_id': (unique user identifier),
 'name': (first name, last initial, like 'Matt J.'), this column has been made anonymous to preserve privacy
 'url': url of the user on yelp
-Note: :: is Column separator in the files.
+
+**Note:** :: is Column separator in the files.
+
 List the 'user id' and 'rating' of users that reviewed businesses classified as “Colleges & Universities” in list of categories.
+
 Required files are 'business' and 'review'.
-Sample output
+
+**Sample output:**
 User id Rating 0WaCdhr3aXb0G0niwTMGTg 4.0
