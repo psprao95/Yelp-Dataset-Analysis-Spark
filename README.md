@@ -1,5 +1,5 @@
 # Yelp-Dataset-Analysis-Spark
-you will use spark (spark, spark dataframe, spark sql) to solve the following problems using the Yelp dataset.
+We use Spark (Spark, Spark dataframe, Spark sql) to solve the following problems using the Yelp dataset.
 
 ## Problem 1
 Write a spark script to find total number of common friends for any possible friend pairs. The key idea is that if two people are friend then they have a lot of mutual/common friends.
@@ -90,3 +90,14 @@ Required files are 'business' and 'review'.
 User id                    Rating 
 0WaCdhr3aXb0G0niwTMGTg     4.0
 ```
+
+
+## Problem 4
+List the business_id , full address and categories of the Top 10 businesses located in “NY” using the average ratings.
+
+This will require you to use ***review.csv*** and ***business.csv*** files.
+
+Sample output:
+```
+business id         full address           categories                           avg rating 
+xdf12344444444,     CA 91711       List['Local Services', 'Carpet Cleaning'].      5.0
