@@ -19,7 +19,7 @@ Here, <User> is a unique integer ID corresponding to a unique user and <Friends>
 
 Output: The output should contain one line per user in the following format:
 ```
-<User_A>, <User_B><TAB><Mutual/Common Friend Number>
+<User_A> <TAB> <User_B><TAB><Mutual/Common Friend Number>
 ``` 
 where <User_A> & <User_B> are unique IDs corresponding to a user A and B (A and B are friend). < Mutual/Common Friend Number > is total number of common friends between user A and user B.
 
@@ -29,8 +29,16 @@ Please answer this question by using data sets below.
 2. userdata.txt. 
 
 The userdata.txt consists of: 
-column1 : userid column2 : firstname column3 : lastname column4 : address column5: city column6 :state
-column7 : zipcode column8 :country column9 :username column10 : date of birth.
+column1 : userid 
+column2 : firstname 
+column3 : lastname 
+column4 : address 
+column5: city 
+column6 :state
+column7 : zipcode 
+column8 :country 
+column9 :username 
+column10 : date of birth.
 
 Find top-10 friend pairs by their total number of common friends. For each top-10 friend pair print detail information in decreasing order of total number of common friends. More specifically the output format can be:
 ```
