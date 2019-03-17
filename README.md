@@ -51,9 +51,9 @@ Find top-10 friend pairs by their total number of common friends. For each top-1
 ## Problem 3
 **Data set info:**
 The dataset files are as follows and columns are separate using ‘::’  
-business.csv. 
-review.csv. 
- user.csv.
+1. business.csv 
+2. review.csv 
+3. user.csv
 
 The ***business.csv*** file contain basic information about local businesses.
 Business.csv file contains the following columns:
