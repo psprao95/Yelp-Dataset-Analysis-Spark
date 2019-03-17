@@ -4,8 +4,8 @@ We use Spark (Spark, Spark dataframe, Spark sql) to solve the following problems
 ## Problem 1
 Write a spark script to find total number of common friends for any possible friend pairs. The key idea is that if two people are friend then they have a lot of mutual/common friends.
 
-For example,Alice’s friends are Bob, Sam, Sara and Nancy.
-Bob’s friends are Alice, Sam, Clara, Nancy.  
+For example,Alice’s friends are Bob, Sam, Sara and Nancy.  
+Bob’s friends are Alice, Sam, Clara, Nancy.    
 Sara’s friends are Alice, Sam, Clara, Nancy.  
 As Alice and Bob are friend and so, their mutual friend list is [Sam, Nancy].  
 As Sara and Bob are not friends and so, their mutual friend list is empty. (In this case you may exclude them from your output).
@@ -31,6 +31,7 @@ Please answer this question by using data sets below.
 2. userdata.txt. 
 
 The userdata.txt consists of: 
+```
 column1 : userid 
 column2 : firstname 
 column3 : lastname 
@@ -41,7 +42,7 @@ column7 : zipcode
 column8 :country 
 column9 :username 
 column10 : date of birth.
-
+```
 Find top-10 friend pairs by their total number of common friends. For each top-10 friend pair print detail information in decreasing order of total number of common friends. More specifically the output format can be:
 ```
 <Total number of Common Friends> <TAB> <First Name of User A> <TAB> <Last Name of User A> <TAB> <address of User A> <TAB> <First Name of User B><TAB> <Last Name of User B> <TAB> <address of User B>
@@ -83,7 +84,7 @@ The ***user.csv*** file contains aggregate information about a single user acros
 
 List the 'user id' and 'rating' of users that reviewed businesses classified as “Colleges & Universities” in list of categories.
 
-Required files are 'business' and 'review'.
+Required files are ***business.csv*** and ***review.csv***.
 
 **Sample output:**
 ```
