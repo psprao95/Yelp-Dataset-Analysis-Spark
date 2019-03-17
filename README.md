@@ -73,11 +73,11 @@ It contains the following columns:
 where review_id' is a unique identifier for the review, 'user_id' is the identifier of the authoring user,'business_id' is the identifier of the reviewed business, and
 'stars': (star rating, integer 1-5),the rating given by the user to a business
 
-***user.csv*** file contains aggregate information about a single user across all of Yelp user.csv file contains the following columns:
+The ***user.csv*** file contains aggregate information about a single user across all of Yelp user.csv file contains the following columns:
 ```
 "user_id"::"name"::"url"
 ```
- where user_id': (unique user identifier), 'name': (first name, last initial, like 'Matt J.'), this column has been made anonymous to preserve privacy, and 'url' is the url of the user on yelp
+ where user_id' is the unique user identifier, 'name' is the name, this column has been made anonymous to preserve privacy, and 'url' is the url of the user on yelp
 
 **Note:** :: is Column separator in the files.
 
@@ -86,4 +86,5 @@ List the 'user id' and 'rating' of users that reviewed businesses classified as 
 Required files are 'business' and 'review'.
 
 **Sample output:**
-User id Rating 0WaCdhr3aXb0G0niwTMGTg 4.0
+User id Rating 
+0WaCdhr3aXb0G0niwTMGTg 4.0
