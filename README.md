@@ -86,5 +86,7 @@ List the 'user id' and 'rating' of users that reviewed businesses classified as 
 Required files are 'business' and 'review'.
 
 **Sample output:**
-User id Rating 
-0WaCdhr3aXb0G0niwTMGTg 4.0
+```
+User id                    Rating 
+0WaCdhr3aXb0G0niwTMGTg     4.0
+```
